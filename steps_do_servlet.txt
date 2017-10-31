@@ -1,0 +1,6 @@
+1.cd /d D:\Cliicy\Java\helloapp
+2.javac -classpath D:\Cliicy\Java\apache-tomcat-6.0.20\lib\servlet-api.jar -sourcepath src -d WEB-INF\classes\mypack src\mypack\LifeServlet.java 
+ or javac -classpath D:\Cliicy\Java\apache-tomcat-6.0.20\lib\servlet-api.jar;D:\Cliicy\Java\apache-tomcat-6.0.20\lib\jsp-api.jar -sourcepath src -d WEB-INF\classes\mypack src\mypack\HelloTag.java
+3.close Eclipse and jar cvf D:\Cliicy\Java\apache-tomcat-6.0.20\webapps\helloapp.war *.* to zip all of the files in the folder helloapp
+4.cd back to D:\Cliicy\Java\apache-tomcat-6.0.20\webapps and delete helloapp because the new helloapp folder will be created when you run startup.bat
+5.open another cmd windows and cd /d d:\Cliicy\Java\apache-tomcat-6.0.20\bin and run startup.bat 
