@@ -1,0 +1,62 @@
+		void sort(string& s){
+			for (int i = 0; i < s.length(); i++){
+				for (int k = 1; k < s.length(); k++)
+				{
+					if (s[i]>s[k])
+					{
+						char c = s[i];
+						s[i] = s[k];
+						s[k] = c;
+					}
+				}
+			}
+		}
+    
+      bool checkstr(string s1, string s2){
+			sort(s1);
+			sort(s2);
+			return (s1 == s2);
+		}
+    bool isScramble(string s1, string s2) {
+			if (s1 == "") return s2 == "";
+			if (checkstr(s1, s2) == false) return false;
+			int len = s1.length();
+			if (len == 1)return true;
+
+			for (int i = 1; i < s1.length(); i++){
+				string left = s1.substr(0, i);
+				string right = s1.substr(i);
+				if (isScreamble(left, s2.substr(i)) && isScreamble(right, s2.substr(i)) || \
+					isScreamble(left, s2.substr(len - i)) && isScreamble(right, s2.substr(len - i)
+					return true;
+
+			}
+    return false;
+
+
+
+bool isScramble(string s1, string s2) {
+        int n1 = s1.size();
+        int n2 = s2.size();
+        return helper(s1,0,n1-1,s2,0,n2-1);
+    }
+    
+    bool helper(string& a, int sa, int ea, string& b, int sb, int eb) {
+        int len = ea-sa+1;
+        if (len != eb-sb+1) return false;
+        if (len==0) return true;
+        if (len==1) return a[sa]==b[sb];
+        vector<int> count(256,0);
+        for (int i = sa; i <= ea; ++i) count[a[i]]++;
+        for (int i = sb; i <= eb; ++i) count[b[i]]--;
+        for (int i = 0; i < 256; ++i) {
+            if (count[i]!=0) return false;
+        }
+        for (int i = 0; i < len-1; ++i) {
+            if ((helper(a,sa,sa+i,b,sb,sb+i) && helper(a,sa+i+1,ea,b,sb+i+1,eb)) || 
+            (helper(a,sa,sa+i,b,eb-i,eb) && helper(a,sa+i+1,ea,b,sb,eb-i-1))) {
+                return true;
+            }
+        }
+        return false;
+    }

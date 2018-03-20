@@ -1,0 +1,6 @@
+how to install python packages:
+1.
+https://pypi.python.org/pypi?%3Aaction=search&term=xmlrpclib&submit=search
+2. search the package that you want to install
+
+3. download and unzip and run python setup.py install

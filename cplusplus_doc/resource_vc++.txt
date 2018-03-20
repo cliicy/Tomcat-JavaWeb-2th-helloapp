@@ -1,0 +1,17 @@
+如何利用VS2013新建一个c++项目
+https://jingyan.baidu.com/album/dca1fa6f44eb64f1a540526f.html?picindex=1
+
+
+IFS Kit - Installable File System Kit
+https://msdn.microsoft.com/en-us/windows/hardware/gg463062.aspx?f=255&MSPPError=-2147217396 
+
+https://msdn.microsoft.com/en-us/windows/hardware/gg463071?f=255&MSPPError=-2147217396
+
+Xen、OpenVZ、KVM、Hyper-V、VMWare虚拟化技术介绍
+http://blog.csdn.net/myweishanli/article/details/24184489
+
+Xen，VMware ESXi，Hyper-V和KVM等虚拟化技术的原理解析
+https://www.server110.com/xen/201404/10378.html
+
+
+
